@@ -15,7 +15,7 @@ var Answers = {
   // Question #4: If I want to set `div` component's HTML class, what attribute
   //              should I declare in JSX?
   // Tip: See exercise #2.
-  answer4: "div",
+  answer4: "className",
 
   // Question #5: A component's properties can be changed after its initialization. True or false?
   // Tip: See exercise #3
@@ -23,7 +23,7 @@ var Answers = {
 
   // Question #6: What's the name of the method for changing the component's state?
   // Tip: See exercise #3
-  answer6: 'stateSet',
+  answer6: 'setState',
 
   // Question #7: You must bind a component's methods (except `render`)
   //              to make it possible to change the state. True or false?

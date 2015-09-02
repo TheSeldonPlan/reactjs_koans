@@ -77,23 +77,27 @@ class WhatsYourName extends React.Component {
 
     onNameChange(event) {
         // Huh... There's something wrong here...
-        var display_text = "Hey there. Enter your name."
-        var new_name = event.target.value
+        let new_name = event.target.value;
         if(new_name){
             this.setState({name: new_name});
         }
     }
 
     render() {
+      let display_text = "Hey there. Enter your name.";
+      let banner = <p>{display_text}</p>;
+      let name = this.state.name;
+      if(name){
+        banner = <p>Hello {name}</p>;
+      }
         return (
             <div>
-                <p>Hello {this.state.name}</p>
+                {banner}
                 <input type="text" name="name" onChange={this.onNameChange} />
             </div>
         );
     }
 }
-
 // Notice some details here:
 //   1. `onChange` attribute isn't placed between `" "`, but `{ }` - we want to
 //      reference function, not string.
